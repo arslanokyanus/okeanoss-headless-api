@@ -61,7 +61,7 @@ export const lists = {
     },
   }),
 
-  SiteSettings: list({
+  SiteSetting: list({
     access: allowAll,
     ui: {
       labelField: 'siteName',

@@ -1,19 +1,31 @@
 {
   "name": "okeanoss-headless-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "keystone dev",
+    "build": "keystone build",
+    "start": "keystone start"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.30.3",
   "dependencies": {
+    "@keystone-6/auth": "^8.1.0",
     "@keystone-6/core": "^6.5.1",
     "@keystone-6/fields-document": "^9.1.1",
-    "@types/node": "^25.3.1",
-    "typescript": "^5.9.3"
+    "@prisma/client": "5.22.0",
+    "@types/node": "^22.13.5",
+    "dotenv": "^17.3.1",
+    "jsonwebtoken": "^9.0.3",
+    "typescript": "^5.7.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "prisma",
+      "esbuild"
+    ]
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
+    "prisma": "5.22.0"
   }
 }

@@ -8,18 +8,37 @@ importers:
 
   .:
     dependencies:
+      '@keystone-6/auth':
+        specifier: ^8.1.0
+        version: 8.1.0(@keystone-6/core@6.5.1(@prisma/generator-helper@5.22.0)(@types/express@4.17.25)(@types/react@18.3.28))(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@keystone-6/core':
         specifier: ^6.5.1
-        version: 6.5.1(@prisma/generator-helper@5.22.0)(@types/express@4.17.25)(@types/react@19.2.14)
+        version: 6.5.1(@prisma/generator-helper@5.22.0)(@types/express@4.17.25)(@types/react@18.3.28)
       '@keystone-6/fields-document':
         specifier: ^9.1.1
-        version: 9.1.1(@keystone-6/core@6.5.1(@prisma/generator-helper@5.22.0)(@types/express@4.17.25)(@types/react@19.2.14))(slate-dom@0.123.0(slate@0.110.2))
+        version: 9.1.1(@keystone-6/core@6.5.1(@prisma/generator-helper@5.22.0)(@types/express@4.17.25)(@types/react@18.3.28))(slate-dom@0.123.0(slate@0.110.2))
+      '@prisma/client':
+        specifier: 5.22.0
+        version: 5.22.0(prisma@5.22.0)
       '@types/node':
-        specifier: ^25.3.1
-        version: 25.3.1
+        specifier: ^22.13.5
+        version: 22.19.13
+      dotenv:
+        specifier: ^17.3.1
+        version: 17.3.1
+      jsonwebtoken:
+        specifier: ^9.0.3
+        version: 9.0.3
       typescript:
-        specifier: ^5.9.3
+        specifier: ^5.7.3
         version: 5.9.3
+    devDependencies:
+      '@types/jsonwebtoken':
+        specifier: ^9.0.10
+        version: 9.0.10
+      prisma:
+        specifier: 5.22.0
+        version: 5.22.0
 
 packages:
 
@@ -644,6 +663,12 @@ packages:
   '@juggle/resize-observer@3.4.0':
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
 
+  '@keystone-6/auth@8.1.0':
+    resolution: {integrity: sha512-hlkBJnAjG0FGwwAOZKr0fUSQZSMckTozZWICzG0V1/hXPNpJYPdToXkY537wF54BVI0C4mJDw4mD8QF//QyVGw==}
+    peerDependencies:
+      '@keystone-6/core': ^6.0.0
+      react: ^18.3.1
+
   '@keystone-6/core@6.5.1':
     resolution: {integrity: sha512-Fa95sMV48sLg04q8Zysl9FAUKmZpOqAEp0ulOgLaSQryB5wm9mlseJ3jYIq2Fj4BYrE41TAoZ17udDlbNltq8g==}
     hasBin: true
@@ -1121,6 +1146,9 @@ packages:
   '@types/http-errors@2.0.5':
     resolution: {integrity: sha512-r8Tayk8HJnX0FztbZN7oVqGccWgw98T/0neJphO91KkmOzug1KkofZURD4UaD5uH8AqcFLfdPErnBod0u71/qg==}
 
+  '@types/jsonwebtoken@9.0.10':
+    resolution: {integrity: sha512-asx5hIG9Qmf/1oStypjanR7iKTv0gXQ1Ov/jfrX6kS/EO0OFni8orbmGCn0672NHR3kXHwpAwR+B368ZGN/2rA==}
+
   '@types/long@4.0.2':
     resolution: {integrity: sha512-MqTGEo5bj5t157U6fA/BiDynNkn0YknVdh48CMPkTSpFTVmvao5UQmm7uEF6xBEo7qIMAlY/JSleYaE6VOdpaA==}
 
@@ -1133,11 +1161,14 @@ packages:
   '@types/minimist@1.2.5':
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
 
+  '@types/ms@2.1.0':
+    resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
+
   '@types/node-fetch@2.6.13':
     resolution: {integrity: sha512-QGpRVpzSaUs30JBSGPjOg4Uveu384erbHBoT1zeONvyCfwQxIkUshLAOqN/k9EjGviPRmWTTe6aH2qySWKTVSw==}
 
-  '@types/node@25.3.1':
-    resolution: {integrity: sha512-hj9YIJimBCipHVfHKRMnvmHg+wfhKc0o4mTtXh9pKBjC8TLJzz0nzGmLi5UJsYAUgSvXFHgb0V2oY10DUFtImw==}
+  '@types/node@22.19.13':
+    resolution: {integrity: sha512-akNQMv0wW5uyRpD2v2IEyRSZiR+BeGuoB6L310EgGObO44HSMNT8z1xzio28V8qOrgYaopIDNA18YgdXd+qTiw==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -1164,9 +1195,6 @@ packages:
 
   '@types/react@18.3.28':
     resolution: {integrity: sha512-z9VXpC7MWrhfWipitjNdgCauoMLRdIILQsAEV+ZesIzBq/oUlxk0m3ApZuMFCXdnS4U7KrI+l3WRUEGQ8K1QKw==}
-
-  '@types/react@19.2.14':
-    resolution: {integrity: sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w==}
 
   '@types/send@0.17.6':
     resolution: {integrity: sha512-Uqt8rPBE8SY0RK8JB1EzVOIZ32uqy8HwdxCnoCOsYrvnswqmFZ/k+9Ikidlk/ImhsdvBsloHbAlewb2IEBV/Og==}
@@ -1265,6 +1293,9 @@ packages:
 
   bowser@2.14.1:
     resolution: {integrity: sha512-tzPjzCxygAKWFOJP011oxFHs57HzIhOEracIgAePE4pqB3LikALKnSzUyU4MGs9/iCEUuHlAJTjTc5M+u7YEGg==}
+
+  buffer-equal-constant-time@1.0.1:
+    resolution: {integrity: sha512-zRpUiDwd/xk6ADqPMATG8vc9VPrkck7T07OIx0gnjmJAnHnTVXNQG3vfvWNuiZIkwu9KrKdA1iJKfsfTVxE6NA==}
 
   buffer@5.6.0:
     resolution: {integrity: sha512-/gDYp/UtU0eA1ys8bOs9J6a+E/KWIY+DZ+Q2WESNUA0jFRsJOc0SNUO6xJ5SGA1xueg3NL65W6s+NY5l9cunuw==}
@@ -1378,6 +1409,9 @@ packages:
     resolution: {integrity: sha512-AdmX6xUzdNASswsFtmwSt7Vj8po9IuqXm0UXz7QKPuEUmPB4XyjGfaAr2PSuELMwkRMVH1EpIkX5bTZGRB3eCA==}
     engines: {node: '>=10'}
 
+  cross-fetch@4.1.0:
+    resolution: {integrity: sha512-uKm5PU+MHTootlWEY+mZ4vvXoCn4fLQxT9dSc1sXVMSFkINTJVN8cAQROpwcKm8bJ/c7rgZVIBWzH5T78sNZZw==}
+
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
@@ -1453,12 +1487,19 @@ packages:
     resolution: {integrity: sha512-tE7ztYzXHIeyvc7N+hR3oi7FIbf/NIjVP9hmAt3yMXzrQ072/fpjGLx2GxNxGxUl5V73MEqYzioOMoVhGMJ5cA==}
     engines: {node: '>=10'}
 
+  dotenv@17.3.1:
+    resolution: {integrity: sha512-IO8C/dzEb6O3F9/twg6ZLXz164a2fhTnEWb95H23Dm4OuN+92NmEAlTrupP9VW6Jm3sO26tQlqyvyi4CsnY9GA==}
+    engines: {node: '>=12'}
+
   dumb-passwords@0.2.1:
     resolution: {integrity: sha512-tk/krAwT6OAT6b/S1LjJ3CbjJwQryUfBOkqTE8jEJiaUFkcvUQ+9Isu3jgmeZiYmdsLfbs5mfj09kY+otRy5KA==}
 
   dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
+
+  ecdsa-sig-formatter@1.0.11:
+    resolution: {integrity: sha512-nagl3RYrbNv6kQkeJIpt6NJZy8twLB/2vtz6yN9Z4vRKHN4/QZJIEbqohALSgwKdnksuY3k5Addp5lg8sVoVcQ==}
 
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
@@ -1790,6 +1831,16 @@ packages:
   jsonfile@6.2.0:
     resolution: {integrity: sha512-FGuPw30AdOIUTRMC2OMRtQV+jkVj2cfPqSeWXv1NEAJ1qZ5zb1X6z1mFhbfOB/iy3ssJCD+3KuZ8r8C3uVFlAg==}
 
+  jsonwebtoken@9.0.3:
+    resolution: {integrity: sha512-MT/xP0CrubFRNLNKvxJ2BYfy53Zkm++5bX9dtuPbqAeQpTVe0MQTFhao8+Cp//EmJp244xt6Drw/GVEGCUj40g==}
+    engines: {node: '>=12', npm: '>=6'}
+
+  jwa@2.0.1:
+    resolution: {integrity: sha512-hRF04fqJIP8Abbkq5NKGN0Bbr3JxlQ+qhZufXVr0DvujKy93ZCbXZMHDL4EOtodSbCWxOqR8MS1tXA5hwqCXDg==}
+
+  jws@4.0.1:
+    resolution: {integrity: sha512-EKI/M/yqPncGUUh44xz0PxSidXFr/+r0pA70+gIYhjv+et7yxM+s29Y+VGDkovRofQem0fs7Uvf4+YmAdyRduA==}
+
   kind-of@6.0.3:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
     engines: {node: '>=0.10.0'}
@@ -1811,6 +1862,27 @@ packages:
 
   lodash.deburr@4.1.0:
     resolution: {integrity: sha512-m/M1U1f3ddMCs6Hq2tAsYThTBDaAKFDX3dwDo97GEYzamXi9SqUpjWi/Rrj/gf3X2n8ktwgZrlP1z6E3v/IExQ==}
+
+  lodash.includes@4.3.0:
+    resolution: {integrity: sha512-W3Bx6mdkRTGtlJISOvVD/lbqjTlPPUDTMnlXZFnVwi9NKJ6tiAk6LVdlhZMm17VZisqhKcgzpO5Wz91PCt5b0w==}
+
+  lodash.isboolean@3.0.3:
+    resolution: {integrity: sha512-Bz5mupy2SVbPHURB98VAcw+aHh4vRV5IPNhILUCsOzRmsTmSQ17jIuqopAentWoehktxGd9e/hbIXq980/1QJg==}
+
+  lodash.isinteger@4.0.4:
+    resolution: {integrity: sha512-DBwtEWN2caHQ9/imiNeEA5ys1JoRtRfY3d7V9wkqtbycnAmTvRRmbHKDV4a0EYc678/dia0jrte4tjYwVBaZUA==}
+
+  lodash.isnumber@3.0.3:
+    resolution: {integrity: sha512-QYqzpfwO3/CWf3XP+Z+tkQsfaLL/EnUlXWVkIk5FUPc4sBdTehEqZONuyRt2P67PXAk+NXmTBcc97zw9t1FQrw==}
+
+  lodash.isplainobject@4.0.6:
+    resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
+
+  lodash.isstring@4.0.1:
+    resolution: {integrity: sha512-0wJxfxH1wgO3GrbuP+dTTk7op+6L41QCXbGINEmD+ny/G/eCqGzxyCsh7159S+mgDDcoarnBw6PC1PS5+wUGgw==}
+
+  lodash.once@4.1.1:
+    resolution: {integrity: sha512-Sb487aTOCr9drQVL8pIxOzVhafOjZN9UU54hiN8PU3uAiSV7lx1yYNpbNmex2PK6dSJoNTSJUUswT651yww3Mg==}
 
   lodash.sortby@4.7.0:
     resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}
@@ -2478,8 +2550,8 @@ packages:
     resolution: {integrity: sha512-rvKSBiC5zqCCiDZ9kAOszZcDvdAHwwIKJG33Ykj43OKcWsnmcBRL09YTU4nOeHZ8Y2a7l1MgTd08SBe9A8Qj6A==}
     engines: {node: '>=18'}
 
-  undici-types@7.18.2:
-    resolution: {integrity: sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==}
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
   unist-util-is@4.1.0:
     resolution: {integrity: sha512-ZOQSsnce92GrxSqlnEEseX0gi7GH9zTJZ0p9dtu87WRb/37mMPO2Ilx1s/t9vBHrFhbgweUwb+t7cIn5dxPhZg==}
@@ -2599,7 +2671,7 @@ snapshots:
     dependencies:
       graphql: 16.13.0
 
-  '@apollo/client@3.14.0(@types/react@19.2.14)(graphql@16.13.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@apollo/client@3.14.0(@types/react@18.3.28)(graphql@16.13.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@graphql-typed-document-node/core': 3.2.0(graphql@16.13.0)
       '@wry/caches': 1.0.1
@@ -2610,7 +2682,7 @@ snapshots:
       hoist-non-react-statics: 3.3.2
       optimism: 0.18.1
       prop-types: 15.8.1
-      rehackt: 0.1.0(@types/react@19.2.14)(react@18.3.1)
+      rehackt: 0.1.0(@types/react@18.3.28)(react@18.3.1)
       symbol-observable: 4.0.0
       ts-invariant: 0.10.3
       tslib: 2.8.1
@@ -3336,22 +3408,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@emotion/react@11.14.0(@types/react@19.2.14)(react@18.3.1)':
-    dependencies:
-      '@babel/runtime': 7.28.6
-      '@emotion/babel-plugin': 11.13.5
-      '@emotion/cache': 11.14.0
-      '@emotion/serialize': 1.3.3
-      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@18.3.1)
-      '@emotion/utils': 1.4.2
-      '@emotion/weak-memoize': 0.4.0
-      hoist-non-react-statics: 3.3.2
-      react: 18.3.1
-    optionalDependencies:
-      '@types/react': 19.2.14
-    transitivePeerDependencies:
-      - supports-color
-
   '@emotion/serialize@1.3.3':
     dependencies:
       '@emotion/hash': 0.9.2
@@ -3531,10 +3587,29 @@ snapshots:
 
   '@juggle/resize-observer@3.4.0': {}
 
-  '@keystone-6/core@6.5.1(@prisma/generator-helper@5.22.0)(@types/express@4.17.25)(@types/react@19.2.14)':
+  '@keystone-6/auth@8.1.0(@keystone-6/core@6.5.1(@prisma/generator-helper@5.22.0)(@types/express@4.17.25)(@types/react@18.3.28))(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.28.6
+      '@keystone-6/core': 6.5.1(@prisma/generator-helper@5.22.0)(@types/express@4.17.25)(@types/react@18.3.28)
+      '@keystone-ui/button': 7.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))
+      '@keystone-ui/core': 5.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/fields': 7.2.0(@types/react@18.3.28)
+      '@keystone-ui/loading': 6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))
+      '@keystone-ui/notice': 6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))
+      cross-fetch: 4.1.0
+      fast-deep-equal: 3.1.3
+      graphql: 16.13.0
+      react: 18.3.1
+    transitivePeerDependencies:
+      - '@types/react'
+      - encoding
+      - react-dom
+      - supports-color
+
+  '@keystone-6/core@6.5.1(@prisma/generator-helper@5.22.0)(@types/express@4.17.25)(@types/react@18.3.28)':
     dependencies:
       '@apollo/cache-control-types': 1.0.3(graphql@16.13.0)
-      '@apollo/client': 3.14.0(@types/react@19.2.14)(graphql@16.13.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@apollo/client': 3.14.0(@types/react@18.3.28)(graphql@16.13.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@apollo/server': 4.13.0(graphql@16.13.0)
       '@aws-sdk/client-s3': 3.998.0
       '@aws-sdk/lib-storage': 3.998.0(@aws-sdk/client-s3@3.998.0)
@@ -3546,25 +3621,25 @@ snapshots:
       '@graphql-ts/schema': 0.6.4(graphql@16.13.0)
       '@graphql-typed-document-node/core': 3.2.0(graphql@16.13.0)
       '@hapi/iron': 7.0.1
-      '@keystone-ui/button': 7.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))
-      '@keystone-ui/core': 5.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/fields': 7.2.0(@types/react@19.2.14)
-      '@keystone-ui/icons': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/loading': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))
-      '@keystone-ui/modals': 6.0.3(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))
-      '@keystone-ui/notice': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))
-      '@keystone-ui/options': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/pill': 7.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/popover': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/segmented-control': 7.0.3(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/toast': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/tooltip': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/button': 7.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))
+      '@keystone-ui/core': 5.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/fields': 7.2.0(@types/react@18.3.28)
+      '@keystone-ui/icons': 6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/loading': 6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))
+      '@keystone-ui/modals': 6.0.3(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))
+      '@keystone-ui/notice': 6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))
+      '@keystone-ui/options': 6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/pill': 7.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/popover': 6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/segmented-control': 7.0.3(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/toast': 6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/tooltip': 6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nodelib/fs.walk': 2.0.0
       '@prisma/client': 5.22.0(prisma@5.22.0)
       '@prisma/internals': 5.22.0
       '@prisma/migrate': 5.22.0(@prisma/generator-helper@5.22.0)(@prisma/internals@5.22.0)
       '@sindresorhus/slugify': 1.1.2
-      apollo-upload-client: 17.0.0(@apollo/client@3.14.0(@types/react@19.2.14)(graphql@16.13.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(graphql@16.13.0)
+      apollo-upload-client: 17.0.0(@apollo/client@3.14.0(@types/react@18.3.28)(graphql@16.13.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(graphql@16.13.0)
       bcryptjs: 2.4.3
       body-parser: 1.20.4
       bytes: 3.1.2
@@ -3617,7 +3692,7 @@ snapshots:
     dependencies:
       react: 18.3.1
 
-  '@keystone-6/fields-document@9.1.1(@keystone-6/core@6.5.1(@prisma/generator-helper@5.22.0)(@types/express@4.17.25)(@types/react@19.2.14))(slate-dom@0.123.0(slate@0.110.2))':
+  '@keystone-6/fields-document@9.1.1(@keystone-6/core@6.5.1(@prisma/generator-helper@5.22.0)(@types/express@4.17.25)(@types/react@18.3.28))(slate-dom@0.123.0(slate@0.110.2))':
     dependencies:
       '@babel/runtime': 7.28.6
       '@braintree/sanitize-url': 7.0.4
@@ -3625,7 +3700,7 @@ snapshots:
       '@dnd-kit/modifiers': 7.0.0(@dnd-kit/core@6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@dnd-kit/sortable': 8.0.0(@dnd-kit/core@6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@emotion/weak-memoize': 0.4.0
-      '@keystone-6/core': 6.5.1(@prisma/generator-helper@5.22.0)(@types/express@4.17.25)(@types/react@19.2.14)
+      '@keystone-6/core': 6.5.1(@prisma/generator-helper@5.22.0)(@types/express@4.17.25)(@types/react@18.3.28)
       '@keystone-6/document-renderer': 1.1.2(react@18.3.1)
       '@keystone-ui/button': 7.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))
       '@keystone-ui/core': 5.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3667,34 +3742,10 @@ snapshots:
       - react-dom
       - supports-color
 
-  '@keystone-ui/button@7.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))':
-    dependencies:
-      '@babel/runtime': 7.28.6
-      '@keystone-ui/core': 5.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/icons': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/loading': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))
-      react: 18.3.1
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-      - supports-color
-
   '@keystone-ui/core@5.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.28.6
       '@emotion/react': 11.14.0(@types/react@18.3.28)(react@18.3.1)
-      '@types/facepaint': 1.2.5
-      facepaint: 1.2.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
-
-  '@keystone-ui/core@5.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@babel/runtime': 7.28.6
-      '@emotion/react': 11.14.0(@types/react@19.2.14)(react@18.3.1)
       '@types/facepaint': 1.2.5
       facepaint: 1.2.1
       react: 18.3.1
@@ -3719,22 +3770,6 @@ snapshots:
       - '@types/react'
       - supports-color
 
-  '@keystone-ui/fields@7.2.0(@types/react@19.2.14)':
-    dependencies:
-      '@babel/runtime': 7.28.6
-      '@keystone-ui/core': 5.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/icons': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/popover': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      date-fns: 2.30.0
-      react: 18.3.1
-      react-day-picker: 8.10.1(date-fns@2.30.0)(react@18.3.1)
-      react-dom: 18.3.1(react@18.3.1)
-      react-focus-lock: 2.13.7(@types/react@19.2.14)(react@18.3.1)
-      react-select: 5.10.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
-
   '@keystone-ui/icons@6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.28.6
@@ -3745,30 +3780,10 @@ snapshots:
       - react-dom
       - supports-color
 
-  '@keystone-ui/icons@6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@babel/runtime': 7.28.6
-      '@keystone-ui/core': 5.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-      - supports-color
-
   '@keystone-ui/loading@6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))':
     dependencies:
       '@babel/runtime': 7.28.6
       '@keystone-ui/core': 5.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-      - supports-color
-
-  '@keystone-ui/loading@6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))':
-    dependencies:
-      '@babel/runtime': 7.28.6
-      '@keystone-ui/core': 5.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
     transitivePeerDependencies:
       - '@types/react'
@@ -3789,50 +3804,36 @@ snapshots:
       - react-dom
       - supports-color
 
-  '@keystone-ui/modals@6.0.3(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))':
+  '@keystone-ui/notice@6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))':
     dependencies:
       '@babel/runtime': 7.28.6
-      '@keystone-ui/button': 7.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))
-      '@keystone-ui/core': 5.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-focus-lock: 2.13.7(@types/react@19.2.14)(react@18.3.1)
-      react-remove-scroll: 2.7.2(@types/react@19.2.14)(react@18.3.1)
-      react-transition-group: 4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-      - supports-color
-
-  '@keystone-ui/notice@6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))':
-    dependencies:
-      '@babel/runtime': 7.28.6
-      '@keystone-ui/button': 7.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))
-      '@keystone-ui/core': 5.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/icons': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/button': 7.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))
+      '@keystone-ui/core': 5.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/icons': 6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@keystone-ui/options@6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@keystone-ui/options@6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.28.6
-      '@keystone-ui/core': 5.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/fields': 7.2.0(@types/react@19.2.14)
-      '@keystone-ui/icons': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/core': 5.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/fields': 7.2.0(@types/react@18.3.28)
+      '@keystone-ui/icons': 6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
-      react-select: 5.10.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-select: 5.10.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@keystone-ui/pill@7.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@keystone-ui/pill@7.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.28.6
-      '@keystone-ui/core': 5.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/icons': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/core': 5.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/icons': 6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
     transitivePeerDependencies:
       - '@types/react'
@@ -3852,34 +3853,21 @@ snapshots:
       - '@types/react'
       - supports-color
 
-  '@keystone-ui/popover@6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@keystone-ui/segmented-control@7.0.3(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.28.6
-      '@keystone-ui/core': 5.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@popperjs/core': 2.11.8
-      focus-trap: 7.8.0
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-popper: 2.3.0(@popperjs/core@2.11.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
-
-  '@keystone-ui/segmented-control@7.0.3(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@babel/runtime': 7.28.6
-      '@keystone-ui/core': 5.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/core': 5.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@keystone-ui/toast@6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@keystone-ui/toast@6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.28.6
-      '@keystone-ui/core': 5.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/icons': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/core': 5.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@keystone-ui/icons': 6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
     transitivePeerDependencies:
       - '@types/react'
@@ -3891,18 +3879,6 @@ snapshots:
       '@babel/runtime': 7.28.6
       '@keystone-ui/core': 5.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@keystone-ui/popover': 6.0.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      apply-ref: 1.0.0
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
-
-  '@keystone-ui/tooltip@6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@babel/runtime': 7.28.6
-      '@keystone-ui/core': 5.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@keystone-ui/popover': 6.0.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       apply-ref: 1.0.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -4395,19 +4371,19 @@ snapshots:
   '@types/body-parser@1.19.6':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 25.3.1
+      '@types/node': 22.19.13
 
   '@types/busboy@1.5.4':
     dependencies:
-      '@types/node': 25.3.1
+      '@types/node': 22.19.13
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 25.3.1
+      '@types/node': 22.19.13
 
   '@types/express-serve-static-core@4.19.8':
     dependencies:
-      '@types/node': 25.3.1
+      '@types/node': 22.19.13
       '@types/qs': 6.14.0
       '@types/range-parser': 1.2.7
       '@types/send': 1.2.1
@@ -4423,6 +4399,11 @@ snapshots:
 
   '@types/http-errors@2.0.5': {}
 
+  '@types/jsonwebtoken@9.0.10':
+    dependencies:
+      '@types/ms': 2.1.0
+      '@types/node': 22.19.13
+
   '@types/long@4.0.2': {}
 
   '@types/mdast@3.0.15':
@@ -4433,14 +4414,16 @@ snapshots:
 
   '@types/minimist@1.2.5': {}
 
+  '@types/ms@2.1.0': {}
+
   '@types/node-fetch@2.6.13':
     dependencies:
-      '@types/node': 25.3.1
+      '@types/node': 22.19.13
       form-data: 4.0.5
 
-  '@types/node@25.3.1':
+  '@types/node@22.19.13':
     dependencies:
-      undici-types: 7.18.2
+      undici-types: 6.21.0
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -4458,32 +4441,24 @@ snapshots:
     dependencies:
       '@types/react': 18.3.28
 
-  '@types/react-transition-group@4.4.12(@types/react@19.2.14)':
-    dependencies:
-      '@types/react': 19.2.14
-
   '@types/react@18.3.28':
     dependencies:
       '@types/prop-types': 15.7.15
       csstype: 3.2.3
 
-  '@types/react@19.2.14':
-    dependencies:
-      csstype: 3.2.3
-
   '@types/send@0.17.6':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 25.3.1
+      '@types/node': 22.19.13
 
   '@types/send@1.2.1':
     dependencies:
-      '@types/node': 25.3.1
+      '@types/node': 22.19.13
 
   '@types/serve-static@1.15.10':
     dependencies:
       '@types/http-errors': 2.0.5
-      '@types/node': 25.3.1
+      '@types/node': 22.19.13
       '@types/send': 0.17.6
 
   '@types/unist@2.0.11': {}
@@ -4524,9 +4499,9 @@ snapshots:
     dependencies:
       color-convert: 2.0.1
 
-  apollo-upload-client@17.0.0(@apollo/client@3.14.0(@types/react@19.2.14)(graphql@16.13.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(graphql@16.13.0):
+  apollo-upload-client@17.0.0(@apollo/client@3.14.0(@types/react@18.3.28)(graphql@16.13.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(graphql@16.13.0):
     dependencies:
-      '@apollo/client': 3.14.0(@types/react@19.2.14)(graphql@16.13.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@apollo/client': 3.14.0(@types/react@18.3.28)(graphql@16.13.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       extract-files: 11.0.0
       graphql: 16.13.0
 
@@ -4578,6 +4553,8 @@ snapshots:
       - supports-color
 
   bowser@2.14.1: {}
+
+  buffer-equal-constant-time@1.0.1: {}
 
   buffer@5.6.0:
     dependencies:
@@ -4690,6 +4667,12 @@ snapshots:
       path-type: 4.0.0
       yaml: 1.10.2
 
+  cross-fetch@4.1.0:
+    dependencies:
+      node-fetch: 2.7.0
+    transitivePeerDependencies:
+      - encoding
+
   csstype@3.2.3: {}
 
   dataloader@2.2.3: {}
@@ -4746,6 +4729,8 @@ snapshots:
     dependencies:
       is-obj: 2.0.0
 
+  dotenv@17.3.1: {}
+
   dumb-passwords@0.2.1: {}
 
   dunder-proto@1.0.1:
@@ -4753,6 +4738,10 @@ snapshots:
       call-bind-apply-helpers: 1.0.2
       es-errors: 1.3.0
       gopd: 1.2.0
+
+  ecdsa-sig-formatter@1.0.11:
+    dependencies:
+      safe-buffer: 5.2.1
 
   ee-first@1.1.1: {}
 
@@ -4979,7 +4968,7 @@ snapshots:
   graphql-upload@15.0.2(@types/express@4.17.25)(graphql@16.13.0):
     dependencies:
       '@types/busboy': 1.5.4
-      '@types/node': 25.3.1
+      '@types/node': 22.19.13
       '@types/object-path': 0.11.4
       busboy: 1.6.0
       fs-capacitor: 6.2.0
@@ -5105,6 +5094,30 @@ snapshots:
     optionalDependencies:
       graceful-fs: 4.2.11
 
+  jsonwebtoken@9.0.3:
+    dependencies:
+      jws: 4.0.1
+      lodash.includes: 4.3.0
+      lodash.isboolean: 3.0.3
+      lodash.isinteger: 4.0.4
+      lodash.isnumber: 3.0.3
+      lodash.isplainobject: 4.0.6
+      lodash.isstring: 4.0.1
+      lodash.once: 4.1.1
+      ms: 2.1.3
+      semver: 7.7.4
+
+  jwa@2.0.1:
+    dependencies:
+      buffer-equal-constant-time: 1.0.1
+      ecdsa-sig-formatter: 1.0.11
+      safe-buffer: 5.2.1
+
+  jws@4.0.1:
+    dependencies:
+      jwa: 2.0.1
+      safe-buffer: 5.2.1
+
   kind-of@6.0.3: {}
 
   kleur@3.0.3: {}
@@ -5121,6 +5134,20 @@ snapshots:
       p-locate: 4.1.0
 
   lodash.deburr@4.1.0: {}
+
+  lodash.includes@4.3.0: {}
+
+  lodash.isboolean@3.0.3: {}
+
+  lodash.isinteger@4.0.4: {}
+
+  lodash.isnumber@3.0.3: {}
+
+  lodash.isplainobject@4.0.6: {}
+
+  lodash.isstring@4.0.1: {}
+
+  lodash.once@4.1.1: {}
 
   lodash.sortby@4.7.0: {}
 
@@ -5467,18 +5494,6 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.28
 
-  react-focus-lock@2.13.7(@types/react@19.2.14)(react@18.3.1):
-    dependencies:
-      '@babel/runtime': 7.28.6
-      focus-lock: 1.3.6
-      prop-types: 15.8.1
-      react: 18.3.1
-      react-clientside-effect: 1.2.8(react@18.3.1)
-      use-callback-ref: 1.3.3(@types/react@19.2.14)(react@18.3.1)
-      use-sidecar: 1.1.3(@types/react@19.2.14)(react@18.3.1)
-    optionalDependencies:
-      '@types/react': 19.2.14
-
   react-is@16.13.1: {}
 
   react-popper@2.3.0(@popperjs/core@2.11.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
@@ -5497,14 +5512,6 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.28
 
-  react-remove-scroll-bar@2.3.8(@types/react@19.2.14)(react@18.3.1):
-    dependencies:
-      react: 18.3.1
-      react-style-singleton: 2.2.3(@types/react@19.2.14)(react@18.3.1)
-      tslib: 2.8.1
-    optionalDependencies:
-      '@types/react': 19.2.14
-
   react-remove-scroll@2.7.2(@types/react@18.3.28)(react@18.3.1):
     dependencies:
       react: 18.3.1
@@ -5515,17 +5522,6 @@ snapshots:
       use-sidecar: 1.1.3(@types/react@18.3.28)(react@18.3.1)
     optionalDependencies:
       '@types/react': 18.3.28
-
-  react-remove-scroll@2.7.2(@types/react@19.2.14)(react@18.3.1):
-    dependencies:
-      react: 18.3.1
-      react-remove-scroll-bar: 2.3.8(@types/react@19.2.14)(react@18.3.1)
-      react-style-singleton: 2.2.3(@types/react@19.2.14)(react@18.3.1)
-      tslib: 2.8.1
-      use-callback-ref: 1.3.3(@types/react@19.2.14)(react@18.3.1)
-      use-sidecar: 1.1.3(@types/react@19.2.14)(react@18.3.1)
-    optionalDependencies:
-      '@types/react': 19.2.14
 
   react-select@5.10.2(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
@@ -5544,23 +5540,6 @@ snapshots:
       - '@types/react'
       - supports-color
 
-  react-select@5.10.2(@types/react@19.2.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
-    dependencies:
-      '@babel/runtime': 7.28.6
-      '@emotion/cache': 11.14.0
-      '@emotion/react': 11.14.0(@types/react@19.2.14)(react@18.3.1)
-      '@floating-ui/dom': 1.7.5
-      '@types/react-transition-group': 4.4.12(@types/react@19.2.14)
-      memoize-one: 6.0.0
-      prop-types: 15.8.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-transition-group: 4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      use-isomorphic-layout-effect: 1.2.1(@types/react@19.2.14)(react@18.3.1)
-    transitivePeerDependencies:
-      - '@types/react'
-      - supports-color
-
   react-style-singleton@2.2.3(@types/react@18.3.28)(react@18.3.1):
     dependencies:
       get-nonce: 1.0.1
@@ -5568,14 +5547,6 @@ snapshots:
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': 18.3.28
-
-  react-style-singleton@2.2.3(@types/react@19.2.14)(react@18.3.1):
-    dependencies:
-      get-nonce: 1.0.1
-      react: 18.3.1
-      tslib: 2.8.1
-    optionalDependencies:
-      '@types/react': 19.2.14
 
   react-transition-group@4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
@@ -5614,9 +5585,9 @@ snapshots:
       indent-string: 4.0.0
       strip-indent: 3.0.0
 
-  rehackt@0.1.0(@types/react@19.2.14)(react@18.3.1):
+  rehackt@0.1.0(@types/react@18.3.28)(react@18.3.1):
     optionalDependencies:
-      '@types/react': 19.2.14
+      '@types/react': 18.3.28
       react: 18.3.1
 
   remove-accents@0.5.0: {}
@@ -5875,7 +5846,7 @@ snapshots:
 
   uint8array-extras@1.5.0: {}
 
-  undici-types@7.18.2: {}
+  undici-types@6.21.0: {}
 
   unist-util-is@4.1.0: {}
 
@@ -5899,24 +5870,11 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.28
 
-  use-callback-ref@1.3.3(@types/react@19.2.14)(react@18.3.1):
-    dependencies:
-      react: 18.3.1
-      tslib: 2.8.1
-    optionalDependencies:
-      '@types/react': 19.2.14
-
   use-isomorphic-layout-effect@1.2.1(@types/react@18.3.28)(react@18.3.1):
     dependencies:
       react: 18.3.1
     optionalDependencies:
       '@types/react': 18.3.28
-
-  use-isomorphic-layout-effect@1.2.1(@types/react@19.2.14)(react@18.3.1):
-    dependencies:
-      react: 18.3.1
-    optionalDependencies:
-      '@types/react': 19.2.14
 
   use-sidecar@1.1.3(@types/react@18.3.28)(react@18.3.1):
     dependencies:
@@ -5925,14 +5883,6 @@ snapshots:
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': 18.3.28
-
-  use-sidecar@1.1.3(@types/react@19.2.14)(react@18.3.1):
-    dependencies:
-      detect-node-es: 1.1.0
-      react: 18.3.1
-      tslib: 2.8.1
-    optionalDependencies:
-      '@types/react': 19.2.14
 
   util-deprecate@1.0.2: {}
 
